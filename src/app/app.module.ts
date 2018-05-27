@@ -13,6 +13,7 @@ import { FundingPageComponent } from './funding-page/funding-page.component';
 const appRoutes: Routes = [
   { path: 'mypage', component: MypageComponent },
   { path: '', component: HomeComponent, pathMatch: 'full' },
+  { path: 'funding', component: FundingPageComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
 

@@ -1,0 +1,39 @@
+@import '~assets/css/helpers/variables';
+
+.funding_data {
+    display: flex;
+    justify-content: center;
+}
+
+.chart_tabmenu {
+    list-style: none;
+    display: inline-flex;
+    padding: 0;
+    width: 341px;
+    justify-content: space-around;
+}
+
+.funding_company_chart {
+    margin: 0 auto;
+}
+
+.username {
+    text-align: center;
+}
+
+.data_number {
+    padding-left: 35px;
+    display: flex;
+    flex-direction: column;
+
+    & > p {
+        font-size: 25px;
+        font-weight: bolder;
+        
+        & > span {
+            font-size: 10px;
+            color: $blue;
+            display: block;
+        }
+    }
+}

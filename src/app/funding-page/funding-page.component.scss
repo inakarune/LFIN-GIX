@@ -1,0 +1,46 @@
+@import '~assets/css/helpers/variables';
+
+.page_subtabmenu {
+    list-style: none;
+    display: flex;
+    color: $blue;
+    width: 1000px;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+
+    & > li {
+        margin-right: 10px;
+    }
+}
+
+.condition_box {
+    border-top: 2px solid orange;
+
+    & > h2 {
+        text-align: center;
+    }
+}
+
+.page_subtitle {
+    color: $blue;
+}
+
+.site_more {
+    color: $blue;
+}
+
+.invest_condition {
+    list-style: none;
+    display: flex;
+
+    & > li {
+        width: 80px;
+        height: 80px;
+        border-radius: 80px;
+        background-color: paleturquoise;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
