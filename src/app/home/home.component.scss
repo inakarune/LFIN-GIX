@@ -153,18 +153,26 @@ progress::-webkit-progress-value {
 
 footer {
     background-color: grey;
+    width: 100vw;
+    position: absolute;
+    left: 0;
 
-    & > h2 {
+    & > div {
+        margin: 0 auto;
+        width: 1000px;
+    }
+
+    & > div > h2 {
         color: $blue;
         font-size: 24px;
     }
 
-    & > h1 {
+    & > div > h1 {
         color: $blue;
         font-size: 40px;
     }
 
-    & > p {
+    & > div > p {
         border-top: 1px solid black;
         border-bottom: 1px solid black;
         color: red;
@@ -173,11 +181,11 @@ footer {
         font-size: 10px;
     }
 
-    & > p > a {
+    & > div > p > a {
         color: red;
     }
 
-    & > p > span {
+    & > div > p > span {
         color: black;
     }
 }

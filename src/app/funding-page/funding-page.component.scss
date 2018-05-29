@@ -1,5 +1,9 @@
 @import '~assets/css/helpers/variables';
 
+h1, .sub{
+    text-align: center;
+}
+
 .page_subtabmenu {
     list-style: none;
     display: flex;
@@ -21,8 +25,95 @@
     }
 }
 
+.funding_datas_container {
+    display: flex;
+}
+
+.company_tag {
+    & > span:nth-child(n + 1) {
+        background-color: $blue;
+        border-radius: 13px;
+        color: white;
+        padding: 5px 13px;
+        font-weight: 300;
+        font-size: 13px;
+    }
+}
+
+.funding_datas {
+    padding-left: 15px;
+
+    & > p:nth-child(2) {
+        & > span {
+            width: 100%;
+            height: 10px;
+            background-color: grey;
+            display: block;
+            margin-top: 16px;
+            position: relative;
+        }
+
+        & label:nth-child(1) {
+            margin-left: 100px;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 27px solid $blue;
+        }
+
+        & label:nth-child(2) {
+            width: 100px;
+            height: 10px;
+            background-color: $blue;
+            display: block;
+            position: absolute;
+            top: 0;
+        }
+    }
+    & > p:nth-child(even) {
+        font-size: 28px;
+        margin: 15px 0px;
+        font-weight: bolder;
+    }
+
+    & > p:nth-child(odd) {
+        font-size: 12px;
+        font-weight: bold;
+        margin-top: 0;
+    }
+
+    
+}
+
+.button_box {
+    & > button {
+        box-shadow: none;
+        border-radius: 3px;
+        margin: 0px 5px 5px 0px;
+    }
+
+    & > button:nth-child(1), & > button:nth-child(2) {
+        border: 1px solid $blue;
+        color: $blue;
+        padding: 11px 40px;
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    & > button:nth-child(3) {
+        display: block;
+        padding: 13px 130px;
+        background-color: $blue;
+        color: white;
+        font-size: 13px;
+        font-weight: bold;
+    }
+}
+
 .page_subtitle {
     color: $blue;
+    border-bottom: 5px solid orange;
 }
 
 .site_more {
@@ -32,10 +123,11 @@
 .invest_condition {
     list-style: none;
     display: flex;
+    justify-content: space-around;
 
     & > li {
-        width: 80px;
-        height: 80px;
+        width: 110px;
+        height: 110px;
         border-radius: 80px;
         background-color: paleturquoise;
         display: flex;
