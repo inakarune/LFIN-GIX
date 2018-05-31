@@ -9,6 +9,8 @@ import { NavComponent } from './nav/nav.component';
 import { MypageComponent } from './mypage/mypage.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { FundingPageComponent } from './funding-page/funding-page.component';
+import { DealingComponent } from './dealing/dealing.component';
+import { OrderComponent } from './order/order.component';
 
 const appRoutes: Routes = [
   { path: 'mypage', component: MypageComponent },
@@ -24,7 +26,9 @@ const appRoutes: Routes = [
     NavComponent,
     MypageComponent,
     PageNotFoundComponent,
-    FundingPageComponent
+    FundingPageComponent,
+    DealingComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,
