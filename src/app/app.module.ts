@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NavComponent } from './nav/nav.component';
@@ -16,6 +15,8 @@ const appRoutes: Routes = [
   { path: 'mypage', component: MypageComponent },
   { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'funding', component: FundingPageComponent },
+  { path: 'order', component: OrderComponent },
+  { path: 'dealing', component: DealingComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
 
@@ -33,8 +34,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(
-      appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
+      appRoutes
     )
   ],
   providers: [],

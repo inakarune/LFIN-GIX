@@ -15,8 +15,37 @@ nav {
         font-size: 13px;
     }
 
+    & > a:last-child {
+        display: none;
+    }
+
     .nav_title {
         font-weight: bolder;
         font-size: 23px;
     }
+}
+
+@media all and (max-width: 767px) {
+    nav {
+        width: 100%;
+
+        & > a:nth-child(1), & > a:nth-child(2), & > a:nth-child(3), & > a:nth-child(5) {
+            display: none;
+        }
+
+        & > a:last-child {
+            display: block;
+            font-size: 18px;
+            font-weight: bolder;
+        }
+
+        .nav_title {
+            font-size: 27px;
+        }
+    }
+
+    .hamenu {
+        width: 30px;
+    }
+
 }

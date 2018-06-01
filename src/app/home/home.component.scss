@@ -16,6 +16,11 @@
     & h5 {
         margin: 0;
     }
+
+    & iframe {
+        width: 213.25px;
+        height: 120px;
+    }
 }
 
 progress {
@@ -42,7 +47,6 @@ progress::-webkit-progress-value {
     }
 
     & > .dealing_list {
-        list-style: none;
         padding: 0;
         margin-left: 16px;
 
@@ -154,8 +158,9 @@ progress::-webkit-progress-value {
 footer {
     background-color: grey;
     width: 100vw;
-    position: absolute;
-    left: 0;
+    // position: absolute;
+    // left: 0;
+    // bottom: 0;
 
     & > div {
         margin: 0 auto;
@@ -190,3 +195,91 @@ footer {
     }
 }
 
+@media all and (max-width: 767px) {
+    .img_box {
+        width: 100%;
+        height: 342px;
+        display: block;
+        background-size: cover;
+
+        & > p {
+            font-size: 18px;
+            left: 6%;
+            bottom: -1%;
+
+            & > .img_title {
+                font-size: 36px;
+            }
+        }
+    }
+
+    .funding_ing {
+        flex-wrap: wrap;
+        & > div {
+            width: 100%;
+            height: 104px;
+            display: flex;
+            align-items: center;
+            background-color: transparent;
+            border-bottom: 1.5px solid lightgrey;
+
+            & p {
+                margin: 0;
+            }
+
+            & > div {
+
+                & > span {
+                    color: $blue;
+                    font-size: 11px;
+                    font-weight: bold;
+                }
+
+                & > .game_title {
+                    font-size: 23px;
+                    font-weight: bolder;
+                }
+
+                & > p {
+                    font-size: 11px;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        & iframe {
+            width: 130.25px;
+            height: 93px;
+        }
+    }
+
+    .news, .small_section {
+        display: none;
+    }
+
+    footer {
+        width: 100%;
+        background-color: transparent;
+
+        & > div {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            & > h2 {
+                order: 0
+            }
+            & > h1 {
+                order: 1;
+            }
+
+            & > p {
+                order: 4;
+            }
+
+            & > .sns_icons {
+                order: 2;
+            }
+        }
+    }
+}
