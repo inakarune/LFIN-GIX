@@ -3,9 +3,7 @@
 .funding_ing {
     display: flex;
     justify-content: space-between;
-    & > h2 {
-
-    }
+    
 
     & > div {
         background-color: $boxColor;
@@ -24,9 +22,10 @@
 }
 
 progress {
+    width: 100%;
     border: none;
     background-color: #ddd;
-    height: 9px;
+    height: 7px;
     margin: 0 auto;
 }
 
@@ -41,6 +40,7 @@ progress::-webkit-progress-value {
 
 .dealing {
     width: 360px;
+    box-sizing: border-box;
 
     & > h2 {
         margin-bottom: 0;
@@ -215,6 +215,7 @@ footer {
 
     .funding_ing {
         flex-wrap: wrap;
+        padding: 0 3.5vw;
         & > div {
             width: 100%;
             height: 104px;
@@ -228,6 +229,7 @@ footer {
             }
 
             & > div {
+                width: 100%;
 
                 & > span {
                     color: $blue;
@@ -244,14 +246,53 @@ footer {
                     font-size: 11px;
                     font-weight: bold;
                 }
+
+                & > p:last-child {
+                    margin-top: 1.8vw;
+                }
             }
         }
 
         & iframe {
             width: 130.25px;
             height: 93px;
+            margin-right: 3.5vw;
         }
     }
+
+    .dealing {
+        box-sizing: border-box;
+        padding: 0 3.5vw;
+
+       & > .dealing_list {
+            margin: 0;
+    
+            & > li {
+                padding-bottom: 10px;
+                padding-top: 10px;
+
+                & > div {
+                    justify-content: center;
+                }
+
+                & > div > p {
+                    font-size: 23px;
+                    font-weight: bolder;
+                }
+
+                & > div > p > span {
+                    font-size: 18px;
+                }
+
+                & > img {
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+        }
+
+    }
+
 
     .news, .small_section {
         display: none;
@@ -260,6 +301,9 @@ footer {
     footer {
         width: 100%;
         background-color: transparent;
+        margin-top: 8vw;
+        padding: 0 3.5vw;
+        box-sizing: border-box;
 
         & > div {
             width: 100%;
@@ -267,18 +311,41 @@ footer {
             flex-direction: column;
 
             & > h2 {
-                order: 0
+                order: 0;
+                margin: 0;
+                font-size: 20px;
             }
             & > h1 {
                 order: 1;
+                margin: 0;
             }
 
             & > p {
                 order: 4;
+                border-bottom: 0px;
+                font-size: 11px;
+                line-height: 140%;
+            }
+
+            & > p > span {
+                color: red;
+            }
+
+            & > p > a {
+                display: block;
+                text-decoration: none;
             }
 
             & > .sns_icons {
                 order: 2;
+                display: flex;
+                width: 27%;
+                justify-content: space-around;
+            }
+
+            & > .sns_icons > svg {
+                width: 20px;
+                height: 20px;
             }
         }
     }
