@@ -220,6 +220,7 @@ h1, .sub {
                 font-size: 23px;
                 font-weight: bolder;
                 margin: 0;
+                width: 100%;
             }
 
             & > div > button {
@@ -255,6 +256,7 @@ h1, .sub {
             width: 49%;
             color: lightgrey;
             border: 2px solid lightgrey;
+            background-color: white;
             padding: 11px 0;
             font-size: 15px;
         }
