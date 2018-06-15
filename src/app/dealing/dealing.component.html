@@ -1,4 +1,4 @@
-<h1>고스트 하우스</h1>
+<h1 class="game_title_deal">고스트 하우스</h1>
 <section>
   <div>
     <img src="">
@@ -9,10 +9,10 @@
 </section>
 <section>
   <ul class="order_subtabmenu">
-    <li>호가</li>
-    <li>차트</li>
-    <li>체결</li>
-    <li>일별</li>
+    <li [class.selected]="'1' === list" (click)="selectTabMenu('1')">호가</li>
+    <li [class.selected]="'2' === list" (click)="selectTabMenu('2')">차트</li>
+    <li [class.selected]="'3' === list" (click)="selectTabMenu('3')">체결</li>
+    <li [class.selected]="'4' === list" (click)="selectTabMenu('4')">일별</li>
   </ul>
 </section>
 <table>
@@ -23,7 +23,7 @@
     <td>115,717</td>
   </tr>
 </table>
-<table>
+<table class="deal_table">
   <tr>
     <th>일자</th>
     <th>증가</th>
@@ -46,3 +46,4 @@
     <td>8,945,756</td>
   </tr>
 </table>
+

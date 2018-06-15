@@ -1,6 +1,55 @@
 @import '~assets/css/helpers/variables';
 
-.order_subtabmenu {
-    display: flex;
-}
 
+@media all and (max-width: 767px) {
+    .game_title_deal {
+        font-size: 14px;
+        padding: 2vw 0;
+        font-weight: bolder;
+        text-align: center;
+        border-top: 1px solid lightgrey;
+        border-bottom: 1px solid lightgrey;
+    }
+
+    .order_subtabmenu {
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid grey;
+        border-bottom: 1px solid grey;
+        font-size: 13px;
+        
+        & > li {
+            padding: 3vw 5vw;
+        }
+    }
+
+    .selected {
+        border-bottom: 3px solid black;
+        font-weight: bold;
+    }
+    
+    .deal_table {
+        width: 100%;
+        font-size: 13px;
+    
+        & tr:first-child {
+            background-color: lightgrey;
+            border-top: 1px solid grey;
+        }
+    
+        & th {
+            padding: 1.5vw 0;
+            color: grey;
+            text-align: left;
+        }
+    
+        & th:last-child {
+            text-align: right;
+        }
+    
+        & td {
+            padding: 2.5vw 0;
+            text-align: left;
+        }
+    }
+}

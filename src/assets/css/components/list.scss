@@ -1,0 +1,100 @@
+.dealing {
+    width: 360px;
+    box-sizing: border-box;
+
+    & > h2 {
+        margin-bottom: 0;
+    }
+
+    & > .dealing_list {
+        padding: 0;
+        margin-left: 16px;
+
+        & > li:nth-child(1) {
+            padding-top: 0;
+        }
+
+        & > li {
+            display: flex;
+            border-bottom: 1px solid grey;
+            padding-bottom: 17px;
+            padding-top: 17px;
+
+            & > img {
+                width: 70px;
+                height: 70px;
+                padding-right: 20px;
+            }
+
+            & > div {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+
+            & > div > h5 {
+                margin: 0;
+                color: $blue;
+                font-weight: 400;
+            }
+
+            & > div > p {
+                margin: 0;
+                font-size: 25px;
+                font-weight: bolder;
+            }
+
+            & > div > p > span {
+                font-size: 22px;
+                margin: 0px 10px;
+            }
+
+            & > div > p > span:nth-child(1) {
+                margin-left: 22px;
+            }
+
+            & > div > p > span:nth-child(2) {
+                color: orange;
+            }
+
+            & > div > p > span:nth-child(3) {
+                color: orange;
+            }
+        }
+    }
+}
+
+@media all and (max-width:767px) {
+    .dealing {
+        box-sizing: border-box;
+        padding: 0 3.5vw;
+
+       & > .dealing_list {
+            margin: 0;
+    
+            & > li {
+                padding-bottom: 10px;
+                padding-top: 10px;
+
+                & > div {
+                    justify-content: center;
+                }
+
+                & > div > p {
+                    font-size: 23px;
+                    font-weight: bolder;
+                }
+
+                & > div > p > span {
+                    font-size: 18px;
+                }
+
+                & > img {
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+        }
+
+    }
+}

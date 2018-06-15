@@ -1,4 +1,5 @@
 @import '~assets/css/helpers/variables';
+@import '~assets/css/components/list';
 
 .funding_data {
     display: flex;
@@ -11,6 +12,11 @@
     padding: 0;
     width: 341px;
     justify-content: space-around;
+}
+
+.selected {
+    border-bottom: 3px solid black;
+    font-weight: bold;
 }
 
 .funding_company_chart {
@@ -35,5 +41,15 @@
             color: $blue;
             display: block;
         }
+    }
+}
+
+@media all and (max-width: 767px) {
+    .funding_data {
+        flex-wrap: wrap;
+    }
+
+    .username {
+        display: none;
     }
 }
