@@ -1,40 +1,48 @@
+@import '~assets/css/helpers/variables';
+
 footer {
     background-color: #fafbfc;
-    width: 100vw;
-    // position: absolute;
-    // left: 0;
-    // bottom: 0;
+    width: $DesktopWidth;
+    height: 200px;
+    box-sizing: border-box;
+    padding: 0 $DesktopGridPadding;
+    display: flex;
+    align-items: center;
 
     & > div {
         margin: 0 auto;
-        width: 1000px;
+        width: 100%;
     }
 
     & > div > h2 {
         color: $blue;
-        font-size: 24px;
+        font-size: 17px;
+        margin-bottom: 15px;
+        font-weight: bold;
     }
 
     & > div > h1 {
         color: $blue;
-        font-size: 40px;
+        font-size: 31px;
+        margin-bottom: 15px;
+        font-weight: bold;
     }
 
     & > div > p {
-        border-top: 1px solid black;
-        border-bottom: 1px solid black;
+        border-top: 1pt solid #c2c2c2;
         color: #bf0000;
         line-height: 200%;
-        padding: 10px 0px;
-        font-size: 10px;
+        padding: 20px 0px 0px 0px;
+        font-size: 11px;
     }
 
     & > div > p > a {
-        color: red;
+        color: #bf0000;
     }
 
     & > div > p > span {
         color: black;
+        font-size: 10px;
     }
 }
 
