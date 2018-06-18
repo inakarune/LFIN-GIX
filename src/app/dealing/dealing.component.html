@@ -1,49 +1,78 @@
-<h1 class="game_title_deal">고스트 하우스</h1>
-<section>
-  <div>
-    <img src="">
-    <p>52,300</p>
-    <p><span>700<label>+</label></span><span>1.32%</span></p>
-  </div>
-  <button>주문 하기</button>
-</section>
-<section>
-  <ul class="order_subtabmenu">
+<main class="dealing_container">
+  <h1 class="game_title_deal">고스트 하우스</h1>
+
+  <section class="order_subtabmenu">
+      <img src="../../assets/img/ghost_icon.png" />
+      <p>52,300<br/>
+        <span>700<label class="t_up"> </label></span><span>1.32%</span>
+      </p>
+    <button class="order_button">주문 하기</button>
+  </section>
+  <table class="kospi_table">
+    <tr>
+      <td>KOSPI200</td>
+      <td>318.10</td>
+      <td>2.45</td>
+      <td>0.76%</td>
+      <td>115,717</td>
+    </tr>
+  </table>
+  <ul class="tab_menu_c">
     <li [class.selected]="'1' === list" (click)="selectTabMenu('1')">호가</li>
     <li [class.selected]="'2' === list" (click)="selectTabMenu('2')">차트</li>
     <li [class.selected]="'3' === list" (click)="selectTabMenu('3')">체결</li>
     <li [class.selected]="'4' === list" (click)="selectTabMenu('4')">일별</li>
   </ul>
-</section>
-<table>
-  <tr>
-    <td>318.10</td>
-    <td>2.45</td>
-    <td>0.76%</td>
-    <td>115,717</td>
-  </tr>
-</table>
-<table class="deal_table">
-  <tr>
-    <th>일자</th>
-    <th>증가</th>
-    <th>전일비</th>
-    <th>등락률</th>
-    <th>거래량</th>
-  </tr>
-  <tr>
-    <td>05.22</td>
-    <td>275.010</td>
-    <td>9.480</td>
-    <td>3.33%</td>
-    <td>8,945,756</td>
-  </tr>
-  <tr>
-    <td>05.21</td>
-    <td>283.490</td>
-    <td>7.670</td>
-    <td>3.33%</td>
-    <td>8,945,756</td>
-  </tr>
-</table>
-
+  
+  <ng-container [ngSwitch]="list">
+    <app-dealing-hoga-table *ngSwitchCase="'1'"></app-dealing-hoga-table>
+    <ng-container *ngSwitchCase="'2'">222222222</ng-container>
+    <ng-container *ngSwitchCase="'3'">
+      <table class="deal_table">
+        <tr>
+          <th>시간</th>
+          <th>체결가</th>
+          <th>전일비</th>
+          <th>체결량</th>
+        </tr>
+        <tr>
+          <td>05.22</td>
+          <td>275.010</td>
+          <td>9.480</td>
+          <td>3.33%</td>
+        </tr>
+        <tr>
+          <td>05.21</td>
+          <td>283.490</td>
+          <td>7.670</td>
+          <td>3.33%</td>
+        </tr>
+      </table>
+    </ng-container>
+    <ng-container *ngSwitchCase="'4'">
+      <table class="deal_table">
+        <tr>
+          <th>일자</th>
+          <th>증가</th>
+          <th>전일비</th>
+          <th>등락률</th>
+          <th>거래량</th>
+        </tr>
+        <tr>
+          <td>05.22</td>
+          <td>275.010</td>
+          <td>9.480</td>
+          <td>3.33%</td>
+          <td>8,945,756</td>
+        </tr>
+        <tr>
+          <td>05.21</td>
+          <td>283.490</td>
+          <td>7.670</td>
+          <td>3.33%</td>
+          <td>8,945,756</td>
+        </tr>
+      </table>
+    </ng-container>
+  </ng-container>
+</main>  

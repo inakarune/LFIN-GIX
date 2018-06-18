@@ -1,2 +1,83 @@
 @import '~assets/css/helpers/variables';
+@import '~assets/css/components/menu';
+@import '~assets/css/components/button';
 
+.order_container {
+    border-top: 1px solid $borderColor;
+    padding: 0px 25px;
+}
+
+.game_title {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 35px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.tab_menu_c {
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 21px;
+    color: #686868;
+    text-align: center;
+
+    & > li {
+        width: 147px;
+    }
+}
+
+.selected {
+    border-bottom: 7px solid #c34e47;
+    font-weight: bold;
+    width: 147px;
+    color: #c34e47;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.game_order_dash {
+    color: $blue;
+    display: flex;
+    margin-bottom: 30px;
+
+    & > img {
+        width: 100px;
+        height: 100px;
+        margin-right: 20px;
+    }
+
+    & > p {
+        font-size: 51px;
+        font-weight: bold;
+
+        & > span {
+            font-size: 22px;
+            margin-top: 10px;
+        }
+
+        & label {
+            margin-right: 30px;
+            margin-left: 10px;
+        }
+    }
+}
+
+.t_up {
+    width: 0px;
+    height: 0px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 23px solid $blue;
+    display: inline-flex;
+
+}
+
+.t_down {
+
+}
+
+@media all and (max-width: 767px) {
+
+}

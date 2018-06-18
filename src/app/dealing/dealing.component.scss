@@ -1,5 +1,88 @@
 @import '~assets/css/helpers/variables';
+@import '~assets/css/components/menu';
+@import '~assets/css/components/button';
 
+.dealing_container {
+    border-top: 1px solid $borderColor;
+    padding: 0px 25px;
+}
+
+.game_title_deal {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 35px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.t_up {
+    width: 0px;
+    height: 0px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 23px solid $blue;
+    display: inline-flex;
+
+}
+
+.selected {
+    border-bottom: 7px solid black;
+    font-weight: bold;
+    width: 147px;
+    color: black;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.t_down {
+
+}
+
+
+
+
+.deal_table {
+    width: 975px;
+    text-align: center;
+    padding-left: 49px;
+    padding-right: 82px;
+
+    & th {
+        background-color: #e5e5e5;
+        height: 51px;
+        vertical-align: middle;
+        color: #898989;
+        font-size: 21px;
+        font-weight: bold;
+    }
+
+    & th:first-child {
+        text-align: left;
+        padding-left: 24px;
+    }
+
+    & th:nth-child(2) {
+        text-align: left;
+    }
+
+    & td:first-child {
+        padding-top: 20px;
+    }
+
+    & td:nth-child(1) {
+        text-align: left;
+        padding-left: 24px;
+    }
+
+    & td:nth-child(2) {
+        text-align: left;
+    }
+
+    & td {
+        padding: 25px 0;
+        font-size: 23px;
+    }
+}
 
 @media all and (max-width: 767px) {
     .game_title_deal {

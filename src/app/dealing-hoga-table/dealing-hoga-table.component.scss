@@ -1,0 +1,127 @@
+@import '~assets/css/helpers/variables';
+
+$table_sky: #f1faff;
+$table_pink: #fef4f3;
+$bar_sky: #c5eafd;
+$bar_pink: #fdd9d9;
+
+.table_bar_left {
+    height: 40px;
+    line-height: 40px;
+    display: block;
+    text-align: right;
+    background-color: $bar_sky;
+    margin-left: auto;
+
+    & > label {
+        z-index: 1;
+        position: absolute;
+        right: 15px;
+    }
+}
+
+.table_bar_right {
+    height: 40px;
+    line-height: 40px;
+    display: block;
+    text-align: right;
+    background-color: $bar_pink;
+    margin-right: auto;
+
+    & > label {
+        z-index: 1;
+        position: absolute;
+        left: 15px;
+    }
+}
+
+
+
+.hoga_table_top {
+    width: 975px;
+
+    & td {
+        padding: 5px 0px;
+        position: relative;
+        vertical-align: middle;
+        border-top: 1px solid $borderColor;
+    }
+
+    & td:nth-child(1) {
+        font-size: 18px;
+    }
+
+    & td:nth-child(2) {
+        font-size: 21px;
+    }
+
+    & td:nth-child(3) {
+        font-size: 19px;
+    }
+
+    & td:nth-child(1), & td:nth-child(4) {
+        width: 341px;
+    }
+
+    & td:nth-child(2), & td:nth-child(3) {
+        width: 145.5px;
+        text-align: center;
+    }
+
+    & td:nth-child(1), & td:nth-child(2), & td:nth-child(3) {
+        background-color: $table_sky;
+    }
+}
+
+.hoga_table_bottom {
+    width: 975px;
+
+    & td {
+        padding: 5px 0px;
+        position: relative;
+        vertical-align: middle;
+        border-top: 1px solid $borderColor;
+        background-color: $table_pink;
+    }
+
+    & td[rowspan] {
+        background-color: white;
+        width: 341px;
+    }
+
+    // & td:first-child {
+    //     background-color: white;
+    //     width: 341px;
+    // }
+
+    // & td:nth-child(1) {
+    //     font-size: 18px;
+    // }
+
+    & tr:nth-child(n + 1) td:nth-child(1) {
+        font-size: 21px;
+        text-align: center;
+    }
+
+    & tr:nth-child(n + 1) td:nth-child(2) {
+        font-size: 19px;
+        text-align: center;
+    }
+
+    & tr:nth-child(8) td {
+        background-color: #f6f6f6;
+    }
+
+    & td:nth-child(4) {
+        width: 341px;
+    }
+
+    & td:nth-child(2), & td:nth-child(3) {
+        width: 145.5px;
+        text-align: center;
+    }
+
+    & td:nth-child(1), & td:nth-child(2), & td:nth-child(3) {
+        
+    }
+}

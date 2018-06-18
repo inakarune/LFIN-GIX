@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dealing.component.scss']
 })
 export class DealingComponent implements OnInit {
-  list;
+  list: string = '1';
 
   constructor() { }
 

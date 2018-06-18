@@ -12,7 +12,7 @@
         <li [class.selected]="'7' === list" (click)="selectTabMenu('7')">주봉</li>
         <li [class.selected]="'8' === list" (click)="selectTabMenu('8')">월봉</li>
       </ul>
-      
+      <canvas class="time_chart" #timeChart width="480px" height="300px" style="background: white;"></canvas>
     </section>
     <section class="data_number">
       <p>
@@ -25,13 +25,13 @@
       </p>
       <p>
         <span>수익/손실</span>
-        +3,000$(125%)
+        +3,000$<b>(125%)</b>
       </p>
     </section>
   </article>
-  <p>내 투자 현황</p>
-  <canvas class="funding_company_chart" #myCanvas width="300" height="200px" style="background: white;"></canvas>
+  <p class="my_invest_dash">내 투자 현황</p>
   <article class="funding_now">
+    <canvas class="funding_company_chart" #myCanvas width="480px" height="500px" style="background: white;"></canvas>
     <section class="dealing">
       <ul class="dealing_list">
         <li>

@@ -1,0 +1,103 @@
+.kospi_table {
+    border-top: 1px solid #f1f9ff;
+    border-bottom: 1px solid #f1f9ff;
+    width: 100%;
+    font-size: 22px;
+
+
+    & td {
+        padding: 15px 0px;
+        text-align: center;
+    }
+    
+    & td:first-child {
+        background-color: #f6f6f6;
+        padding-left: 30px;
+        text-align: left;
+    }
+}
+
+.order_subtabmenu {
+    color: $blue;
+    display: flex;
+    margin-bottom: 30px;
+
+    & > img {
+        width: 100px;
+        height: 100px;
+        margin-right: 20px;
+    }
+
+    & > p {
+        font-size: 51px;
+        font-weight: bold;
+
+        & > span {
+            font-size: 22px;
+            margin-top: 10px;
+        }
+
+        & label {
+            margin-right: 30px;
+            margin-left: 10px;
+        }
+    }
+}
+
+.tab_menu_c {
+    padding: 20px 0px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 21px;
+    color: #686868;
+    text-align: center;
+
+    & > li {
+        width: 147px;
+    }
+}
+
+@media all and (max-width: 767px) {
+
+    .order_subtabmenu {
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid grey;
+        border-bottom: 1px solid grey;
+        font-size: 13px;
+        
+        & > li {
+            padding: 3vw 5vw;
+        }
+    }
+
+    .selected {
+        border-bottom: 3px solid black;
+        font-weight: bold;
+    }
+    
+    .deal_table {
+        width: 100%;
+        font-size: 13px;
+    
+        & tr:first-child {
+            background-color: lightgrey;
+            border-top: 1px solid grey;
+        }
+    
+        & th {
+            padding: 1.5vw 0;
+            color: grey;
+            text-align: left;
+        }
+    
+        & th:last-child {
+            text-align: right;
+        }
+    
+        & td {
+            padding: 2.5vw 0;
+            text-align: left;
+        }
+    }
+}

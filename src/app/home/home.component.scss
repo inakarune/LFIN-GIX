@@ -91,20 +91,21 @@ progress::-webkit-progress-value {
         padding: 0;
         margin-left: 10px;
 
-        & > li:nth-child(1) {
-            padding-top: 0;
-        }
+        // & > li:nth-child(1) {
+        //     padding-top: 0;
+        // }
 
         & > li {
             display: flex;
-            border-bottom: 1px solid grey;
-            padding-bottom: 17px;
-            padding-top: 17px;
+            border-bottom: 1px solid $borderColor;
+            padding-bottom: 20px;
+            padding-top: 20px;
 
             & > img {
                 width: 70px;
                 height: 70px;
-                padding-right: 5px;
+                padding-left: 5px;
+                padding-right: 24px;
             }
 
             & > div {
@@ -116,17 +117,22 @@ progress::-webkit-progress-value {
             & > div > h5 {
                 margin: 0;
                 color: $blue;
+                font-size: 14px;
                 font-weight: 400;
             }
 
             & > div > p {
                 margin: 0;
-                font-size: 25px;
+                font-size: 29px;
                 font-weight: bolder;
+                color: black;
+                font-weight: bold;
             }
 
             & > div > p > span {
-                font-size: 22px;
+                font-size: 25px;
+                font-weight: bold;
+                color: black;
                 margin: 0px 10px;
             }
 
@@ -135,11 +141,17 @@ progress::-webkit-progress-value {
             }
 
             & > div > p > span:nth-child(2) {
-                color: orange;
+                font-size: 25px;
+                font-weight: bold;
+                color: $orange;
             }
 
             & > div > p > span:nth-child(3) {
-                color: orange;
+                color: $orange;
+            }
+
+            & > div > p > img {
+                width: 30px;
             }
         }
     }
@@ -195,7 +207,8 @@ progress::-webkit-progress-value {
     width: $DesktopWidth;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 15px;
+    margin-top: 30px;
+    margin-bottom: 40px;
 }
 
 .img_box {
@@ -207,18 +220,21 @@ progress::-webkit-progress-value {
     background-size: 100%;
     position: relative;
 
-    & > .img_title {
-        font-size: 45px;
+    & .img_title {
+        font-size: 66px;
         font-weight: bolder;
+        margin-top: 20px;
+        display: block;
     }
 
     & > p {
         position: absolute;
-        left: 50px;
-        bottom: 0;
+        left: 35px;
+        bottom: 35px;
         color: white;
-        font-size: 30px;
-        font-weight: bolder;
+        font-size: 35px;
+        font-weight: bold;
+        line-height: 125%;
     }
 }
 

@@ -1,5 +1,5 @@
 .dealing {
-    width: 360px;
+    width: 500px;
     box-sizing: border-box;
 
     & > h2 {
@@ -17,12 +17,12 @@
         & > li {
             display: flex;
             border-bottom: 1px solid grey;
-            padding-bottom: 17px;
-            padding-top: 17px;
+            padding-bottom: 20px;
+            padding-top: 20px;
 
             & > img {
-                width: 70px;
-                height: 70px;
+                width: 80px;
+                height: 80px;
                 padding-right: 20px;
             }
 
@@ -40,7 +40,7 @@
 
             & > div > p {
                 margin: 0;
-                font-size: 25px;
+                font-size: 29px;
                 font-weight: bolder;
             }
 

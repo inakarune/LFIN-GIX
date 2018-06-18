@@ -1,48 +1,95 @@
 @import '~assets/css/helpers/variables';
 @import '~assets/css/components/list';
 
+.mypage_container {
+    border-top: 1px solid $borderColor;
+}
+
 .funding_data {
     display: flex;
-    justify-content: center;
+    margin-left: 25px;
 }
 
 .chart_tabmenu {
     list-style: none;
     display: inline-flex;
     padding: 0;
-    width: 341px;
+    width: 480px;
     justify-content: space-around;
 }
 
 .selected {
-    border-bottom: 3px solid black;
+    border-bottom: 7px solid black;
     font-weight: bold;
 }
 
 .funding_company_chart {
-    margin: 0 auto;
+    margin-right: 24px;
+    margin-top: auto;
 }
 
 .username {
     text-align: center;
+    font-size: 37px;
+    margin-top: 41px;
+    margin-bottom: 42px;
+    font-weight: bold;
 }
 
 .data_number {
-    padding-left: 35px;
+    padding-left: 54px;
     display: flex;
     flex-direction: column;
 
     & > p {
-        font-size: 25px;
+        font-size: 45px;
         font-weight: bolder;
+        color: #17294f;
+        margin-bottom: 15px;
         
         & > span {
-            font-size: 10px;
+            font-size: 15px;
+            font-weight: bold;
             color: $blue;
             display: block;
+            margin-bottom: 20px;
+        }
+    }
+
+    & > p:nth-child(2) {
+        margin-bottom: 35px;
+    }
+
+    & > p:last-child {
+        font-size: 50px;
+        margin-bottom: 0;
+
+        & > b {
+            font-size: 28px;
+            margin-left: 15px;
         }
     }
 }
+
+.funding_now {
+    display: flex;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-bottom: 40px;
+}
+
+.my_invest_dash {
+    font-size: 23px;
+    font-weight: bold;
+    border-bottom: 7px solid $orange;
+    margin-bottom: 35px;
+    width: 127px;
+    margin-top: 50px;
+    padding-bottom: 10px;
+    margin-left: 25px;
+}
+
+
 
 @media all and (max-width: 767px) {
     .funding_data {

@@ -10,6 +10,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { FundingPageComponent } from './funding-page/funding-page.component';
 import { DealingComponent } from './dealing/dealing.component';
 import { OrderComponent } from './order/order.component';
+import { DealingHogaTableComponent } from './dealing-hoga-table/dealing-hoga-table.component';
 
 const appRoutes: Routes = [
   { path: 'mypage', component: MypageComponent },
@@ -29,7 +30,8 @@ const appRoutes: Routes = [
     PageNotFoundComponent,
     FundingPageComponent,
     DealingComponent,
-    OrderComponent
+    OrderComponent,
+    DealingHogaTableComponent
   ],
   imports: [
     BrowserModule,
