@@ -15,27 +15,113 @@
     </tr>
   </table>
   <ul class="tab_menu_c">
-    <li [class.selected]="'1' === list" (click)="selectTabMenu('1')">일반주문</li>
-    <li [class.selected]="'2' === list" (click)="selectTabMenu('2')">호가주문</li>
-    <li [class.selected]="'3' === list" (click)="selectTabMenu('3')">차트</li>
-    <li [class.selected]="'4' === list" (click)="selectTabMenu('4')">잔고</li>
-    <li [class.selected]="'5' === list" (click)="selectTabMenu('5')">조회</li>
+    <li class="selected">일반주문</li>
+    <li>호가주문</li>
+    <li>차트</li>
+    <li>잔고</li>
+    <li>조회</li>
   </ul>
-  <section>
-    <ul>
-      <li>매수</li>
-      <li>매도</li>
-      <li>정정/취소</li>
-    </ul>
-    <div>
-      <select>
-        <option value="normal">nonrmal</option>
-      </select>
-      <button>현금</button>
-      <button>-</button><div>0주</div><button>+</button>
-      <button>-</button><div>13,250원</div><button>+</button>
-      <input type="checkbox" name="price" id="market_price"><label for="market_price">시장가</label>
-      <button>현금매수</button>
-    </div>
-  </section>
+
+  <article class="password_box">
+    <select class="custom_select_password">
+      <option value="01012345678">01012345678 홍길동</option>
+    </select>
+    <button class="password_b">비밀번호</button>
+  </article>
+
+  <article class="nomalorder_box">
+
+    <section class="table_group_order">
+      <table class="order_table_top">
+        <tr>
+          <td colspan="2">17,800</td>
+        </tr>
+        <tr>
+          <td>13,500</td>
+          <td><span class="table_bar_right" style="width: 80px;"><label>111,222</label></span></td>
+        </tr>
+        <tr>
+          <td>13,500</td>
+          <td><span class="table_bar_right" style="width: 80px;"><label>111,222</label></span></td>
+        </tr>
+        <tr>
+          <td>13,500</td>
+          <td><span class="table_bar_right" style="width: 80px;"><label>111,222</label></span></td>
+        </tr>
+        <tr>
+          <td>13,500</td>
+          <td><span class="table_bar_right" style="width: 80px;"><label>111,222</label></span></td>
+        </tr>
+        <tr>
+          <td>13,500</td>
+          <td><span class="table_bar_right" style="width: 80px;"><label>111,222</label></span></td>
+        </tr>
+        <tr>
+          <td>13,500</td>
+          <td><span class="table_bar_right" style="width: 80px;"><label>111,222</label></span></td>
+        </tr>
+        <tr>
+          <td>13,500</td>
+          <td><span class="table_bar_right" style="width: 80px;"><label>111,222</label></span></td>
+        </tr>
+      </table>
+  
+      <table class="order_table_bottom">
+        <tr>
+          <td>13,500</td>
+          <td><span class="table_bar_right" style="width: 80px;"><label>111,222</label></span></td>
+        </tr>
+        <tr>
+          <td>13,500</td>
+          <td><span class="table_bar_right" style="width: 80px;"><label>111,222</label></span></td>
+        </tr>
+        <tr>
+          <td>13,500</td>
+          <td><span class="table_bar_right" style="width: 80px;"><label>111,222</label></span></td>
+        </tr>
+        <tr>
+          <td>13,500</td>
+          <td><span class="table_bar_right" style="width: 80px;"><label>111,222</label></span></td>
+        </tr>
+        <tr>
+          <td>13,500</td>
+          <td><span class="table_bar_right" style="width: 80px;"><label>111,222</label></span></td>
+        </tr>
+        <tr>
+          <td>13,500</td>
+          <td><span class="table_bar_right" style="width: 80px;"><label>111,222</label></span></td>
+        </tr>
+        <tr>
+          <td>13,500</td>
+          <td><span class="table_bar_right" style="width: 80px;"><label>111,222</label></span></td>
+        </tr>
+        <tr>
+          <td colspan="2">17,800</td>
+        </tr>
+      </table>
+    </section>
+    <section class="order_window">
+      <ul class="window_subtabmenu">
+        <li class="selected_window">매수</li>
+        <li>매도</li>
+        <li>취소</li>
+      </ul>
+      <div class="order_subcontents">
+        <select class="custom_select">
+          <option value="normal">nonrmal</option>
+        </select>
+        <button class="select_cache_button">현금</button>
+        <button class="control_b">-</button><div class="stock_input">0주</div><button class="control_b">+</button>
+        <button class="control_b">-</button><div class="stock_input">13,250원</div><button class="control_b">+</button>
+        <table>
+          <tr>
+            <td>주문총액</td>
+            <td>0원</td>
+          </tr>
+        </table>
+        <input type="checkbox" name="price" id="market_price"><label for="market_price">시장가</label>
+        <button class="cache_button">현금매수</button>
+      </div>
+    </section>
+  </article>
 </main>

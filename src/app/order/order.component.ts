@@ -6,14 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./order.component.scss']
 })
 export class OrderComponent implements OnInit {
-  list: string = '1';
   constructor() { }
 
   ngOnInit() {
   }
 
-  selectTabMenu(li: string) {
-    this.list = li;
-  }
 
 }
