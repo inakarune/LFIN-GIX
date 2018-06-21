@@ -1,0 +1,116 @@
+@import '~assets/css/helpers/variables';
+
+footer {
+    background-color: #fafbfc;
+    width: $DesktopWidth;
+    height: 200px;
+    box-sizing: border-box;
+    padding: 0 $DesktopGridPadding;
+    display: flex;
+    align-items: center;
+
+    & svg:nth-child(2), & svg:nth-child(3) {
+        margin-right: 20px;
+    }
+
+    & svg:nth-child(4) {
+        margin-right: 25px;
+    }
+
+    & > div {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    & h2 {
+        color: $blue;
+        font-size: 17px;
+        margin-right: 63%;
+        margin-bottom: 15px;
+        font-weight: bold;
+        display: inline-block;
+    }
+
+    & > div > h1 {
+        color: $blue;
+        font-size: 31px;
+        margin-bottom: 15px;
+        font-weight: bold;
+    }
+
+    & > div > p {
+        border-top: 1pt solid #c2c2c2;
+        color: #bf0000;
+        line-height: 200%;
+        padding: 20px 0px 0px 0px;
+        font-size: 11px;
+    }
+
+    & > div > p > a {
+        color: #bf0000;
+    }
+
+    & > div > p > span {
+        color: black;
+        font-size: 10px;
+    }
+
+    & .sns_icons {
+        display: flex;
+    }
+}
+
+
+@media all and (max-width: 767px) {
+    footer {
+        width: 100%;
+        background-color: transparent;
+        margin-top: 8vw;
+        padding: 0 3.5vw;
+        box-sizing: border-box;
+    
+        & > div {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+    
+            & h2 {
+                order: 0;
+                margin: 0;
+                font-size: 20px;
+            }
+            & > h1 {
+                order: 1;
+                margin: 0;
+            }
+    
+            & > p {
+                order: 4;
+                border-bottom: 0px;
+                font-size: 11px;
+                line-height: 140%;
+            }
+    
+            & > p > span {
+                color: red;
+            }
+    
+            & > p > a {
+                display: block;
+                text-decoration: none;
+            }
+    
+            & > .sns_icons {
+                order: 2;
+                display: flex;
+                width: 27%;
+                justify-content: space-around;
+            }
+    
+            & > .sns_icons > svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}

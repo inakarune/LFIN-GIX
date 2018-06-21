@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -11,6 +12,7 @@ import { FundingPageComponent } from './funding-page/funding-page.component';
 import { DealingComponent } from './dealing/dealing.component';
 import { OrderComponent } from './order/order.component';
 import { DealingHogaTableComponent } from './dealing-hoga-table/dealing-hoga-table.component';
+import { FooterComponent } from './footer/footer.component';
 
 const appRoutes: Routes = [
   { path: 'mypage', component: MypageComponent },
@@ -31,13 +33,15 @@ const appRoutes: Routes = [
     FundingPageComponent,
     DealingComponent,
     OrderComponent,
-    DealingHogaTableComponent
+    DealingHogaTableComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(
       appRoutes
-    )
+    ),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
