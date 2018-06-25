@@ -12,8 +12,8 @@ export class CompanyService {
 
   constructor(private http: HttpClient) { }
 
-  // getCompany() {
-  //   return this.http.get(this.url + '/company')
-  //     .pipe(catchError());
-  // }
+  getCompany(id: string): Observable<any> {
+    return this.http.get(this.url + '/companys/' + id)
+      .pipe();
+  }
 }

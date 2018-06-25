@@ -12,7 +12,7 @@
       <iframe [src]="sanitizer.bypassSecurityTrustResourceUrl(game.video_url)" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       <div class="game_data">
         <span>{{game.category}}</span>
-        <p class="game_title">{{game.title}}</p>
+        <p class="game_title" routerLink="/funding/{{game.title}}">{{game.title}}</p>
         <progress value="22" max="100"></progress>
         <p><span>87%</span><span>478,000원 달성 9일남음</span></p>
       </div>
@@ -25,7 +25,7 @@
   <section class="dealing">
     <h2>거래진행중 <img src="../../assets/svg/baseline-chevron_right-24px.svg"></h2>
     <ul class="dealing_list">
-      <li *ngFor="let game of dealingList">
+      <li *ngFor="let game of dealingList" routerLink="/dealing/{{game_title}}">
         <img src="{{game.icon_url}}"/>
         <div>
           <h5>{{game.category}}</h5>

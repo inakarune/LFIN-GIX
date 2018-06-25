@@ -45,17 +45,25 @@ h1 {
 // }
 
 .page_subtabmenu {
-    padding: 15px 0px 15px 25px;
+    padding: 15px 0px 0px 25px;
     display: flex;
     color: $blue;
     width: inherit;
     border-top: 1px solid grey;
     border-bottom: 1px solid grey;
+    text-align: center;
+
+    & > li:first-child {
+        color: $orange;
+        width: 77px;
+        border-bottom: 9px solid $orange;
+    }
 
     & > li {
         margin-right: 10px;
         font-size: 21px;
         font-weight: bold;
+        padding-bottom: 6px;
     }
 }
 
@@ -122,6 +130,9 @@ h1 {
 
 .funding_datas {
     padding-left: 5px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 
     & > figure {
         display: none;
@@ -146,7 +157,7 @@ h1 {
             height: 10px;
             background-color: grey;
             display: block;
-            margin-top: 16px;
+            margin-top: 27px;
             position: relative;
         }
 
@@ -157,6 +168,15 @@ h1 {
             border-left: 10px solid transparent;
             border-right: 10px solid transparent;
             border-top: 27px solid $blue;
+            position: relative;
+
+            &  > b {
+                position: absolute;
+                bottom: 32px;
+                left: 14px;
+                font-weight: bold;
+                font-size: 18px;
+            }
         }
 
         & label:nth-child(2) {
@@ -175,6 +195,15 @@ h1 {
 
 .button_box {
     margin-top: 25px;
+
+    & a {
+        text-decoration: none;
+        color: $blue;
+    }
+
+    & a:visited {
+        color: $blue;
+    }
 
     & > button {
         box-shadow: none;
@@ -249,6 +278,11 @@ h1 {
     padding-top: 100px;
     font-size: 22px;
     line-height: 150%;
+    white-space: pre-wrap;
+}
+
+.page_subtitle_m {
+    display: none;
 }
 
 

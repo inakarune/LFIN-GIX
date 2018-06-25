@@ -50,6 +50,7 @@
         }
 
         & > .game_title {
+            cursor: pointer;
             font-size: 20px;
             color: black;
             font-weight: bold;
@@ -108,6 +109,7 @@ progress::-webkit-progress-value {
         // }
 
         & > li {
+            cursor: pointer;
             display: flex;
             border-bottom: 1px solid $borderColor;
             padding-bottom: 20px;

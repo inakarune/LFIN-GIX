@@ -9,23 +9,22 @@ import { catchError, map, tap } from 'rxjs/operators';
 })
 export class GameService {
   url = `http://${environment.api.host}:${environment.api.port}`;
-  
 
   constructor(private http: HttpClient) { }
 
-  getGames(): Observable<{}> {
+  getGames(): Observable<any> {
     return this.http.get(this.url + '/games')
       .pipe(
-        tap(user => this.log('fetched user')),
-        catchError(this.handleError('getUser', []))
+        tap(user => this.log('fetched games')),
+        catchError(this.handleError('getGames', []))
       );
   }
 
   getGame(id: string): Observable<{}> {
     return this.http.get(this.url + `/games/${id}`)
       .pipe(
-        tap(user => this.log('fetched user')),
-        catchError(this.handleError('getUser', []))
+        tap(user => this.log('fetched game')),
+        catchError(this.handleError('getGame', []))
       );
   }
 

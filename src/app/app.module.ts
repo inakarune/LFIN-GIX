@@ -17,7 +17,7 @@ import { FooterComponent } from './footer/footer.component';
 const appRoutes: Routes = [
   { path: 'mypage', component: MypageComponent },
   { path: '', component: HomeComponent, pathMatch: 'full' },
-  { path: 'funding', component: FundingPageComponent },
+  { path: 'funding/:game', component: FundingPageComponent },
   { path: 'order', component: OrderComponent },
   { path: 'dealing', component: DealingComponent },
   { path: '**', component: PageNotFoundComponent }
