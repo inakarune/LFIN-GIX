@@ -1,0 +1,200 @@
+<section id="funding_condition_box" [ngSwitch]="step">
+
+  <ng-container *ngSwitchCase="'1'">
+    <ul>
+      <img src="../../assets/img/No.png" (click)="closePopUp()">
+      <li>
+        <h5>투자 조건을 선택하세요</h5>
+        <p>선착순 제한이 있는 투자 조건의 경우, 이미 청약을 진행한 투자자들의 청약 예약 취소, 청약 신청 철회에 따라 실시간으로 달라질 수 있습니다.</p>
+      </li>
+      <li (click)="switchStep('2', 220)">
+        <h6>220주 이상 투자 시</h6>
+        <span>VIP</span>
+        <p>ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ducimus, tempore sed deserunt maxime eligendi mollitia voluptatem pariatur autem ipsum tenetur, dolorum beatae voluptas. Tempora obcaecati at ea iusto qui?</p>
+        <span>제한없음</span>
+      </li>
+      <li (click)="switchStep('2', 100)">
+        <h6>100주 이상 투자 시</h6>
+        <span>얼리버드</span>
+        <p>ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ducimus, tempore sed deserunt maxime eligendi mollitia voluptatem pariatur autem ipsum tenetur, dolorum beatae voluptas. Tempora obcaecati at ea iusto qui?</p>
+        <span>선착순 10명</span> <span>현재 5명 가능</span>
+      </li>
+      <li (click)="switchStep('2', 50)">
+        <h6>50주 이상 투자 시</h6>
+        <span>베이직</span>
+        <p>ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, vitae. Aperiam fugiat repudiandae soluta? Tempore autem atque repellendus doloribus consectetur expedita, corrupti modi aut provident sit, vel quasi inventore cupiditate.</p>
+      </li>
+    </ul>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'2'">
+    <div class="popup_box">
+      <img src="../../assets/img/No.png" (click)="closePopUp()">
+      <div class="popup_head">
+        <span class="popup_logo"></span><h6>(주)브이에이트</h6><span>투자 조건</span>
+      </div>
+      <p class="input_invest_amount">투자할 주식 수를<br/>
+        <strong>입력하세요.</strong>
+      </p>
+      <input type="text" class="underline_input" placeholder="신청 구좌 수(구좌)" [(ngModel)]="amount" (keyup)="onModelChange($event)">
+      <p class="guide_input">
+        최소 {{stockAmount}}주 ~ 최대 5000주 투자 가능<br/>
+        홍길동님의 현재 투자 가능 한도 5,000,000원 기준
+      </p>
+      <p class="one_per_price">1주당 가격 100,000원</p>
+      <p class="total_money"><span>총 투자 금액</span><span>{{sum}}원</span></p>
+      <button class="popup_button_blue" (click)="switchStep('3')">투자 가능 예치금 확인</button>
+    </div>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'3'">
+    <div class="popup_box">
+      <img src="../../assets/img/No.png" (click)="closePopUp()">
+      <div class="popup_head">
+        <span class="popup_logo"></span><h6>(주)브이에이트</h6><span>투자 조건</span>
+      </div>
+      <p class="input_invest_amount">My GIX 계좌의<br/>
+        <strong>투자 가능 예치금을 조회합니다</strong>
+      </p>
+      <p class="check_invest_amount"><span>{{amount.replace('주', '')}}구좌</span><span>{{sum}}원</span></p>
+      <p class="guide_possible_bank">My GIX 계좌 투자 가능 예치금</p>
+      <div class="textarea_price">
+        <p>신한은행 123456789100<button>계좌복사</button></p>
+        <p>GIX 홍길동</p>
+        <p>{{sum}}원</p>
+      </div>
+      <div class="now_guide_text_box">
+        <p><img src="../../assets/img/warning.png">예치금이 충분합니다.</p>
+        <p>투자 후 남은 예치금은 20,101,888원 입니다.</p>
+        <button>다시 새로고침</button>
+      </div>
+      <button class="popup_button_blue" (click)="switchStep('4')">다음</button>
+    </div>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'4'">
+    <div class="popup_box">
+      <img src="../../assets/img/No.png" (click)="closePopUp()">
+      <div class="popup_head">
+        <span class="popup_logo"></span><h6>(주)브이에이트</h6><span>투자 조건</span>
+      </div>
+      <p class="guide_input_account"><strong>{{amount}}</strong> 가 입고될<br/>
+        <strong>증권계좌를 입력하세요</strong>
+      </p>
+      <div class="cbox">
+        <input type="checkbox" id="bank_cbox">
+        <label for="bank_cbox">최근 입력 계좌와 동일</label>
+      </div>
+  
+      <label for="증권사명" class="bank_label" style="margin-top: 10px;">증권사명</label>
+      <input type="text" class="input_bank_data" placeholder="신한금융투자">
+      <label for="계좌번호" class="bank_label">계좌번호</label>
+      <input type="text" class="input_bank_data" placeholder="194088222940001">
+      <label for="계좌주" class="bank_label">계좌주</label>
+      <input type="text" class="input_bank_data" placeholder="홍길동">
+      <p class="guide_noncheck"><img src="../../assets/img/warning.png">배정 불가 미검증 계좌 관련 안내</p>
+      <button class="popup_button_blue" (click)="switchStep('5')">다음</button>
+    </div>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="5">
+    <div class="popup_box">
+      <img src="../../assets/img/No.png" (click)="closePopUp()">
+      <div class="popup_head">
+        <span class="popup_logo"></span><h6>(주)브이에이트</h6><span>투자 조건</span>
+      </div>
+      <p class="warning_guide">
+        이미 페이백 혜택이 있는<br/>
+        투자 조건을 선택하여<br/>
+        <strong>쿠폰 적용이 불가합니다</strong>
+      </p>
+      <p class="guide_text">페이백 혜택이 있는 투자 조건을 선택한 경우 정책 상 쿠폰과 중복적용이 불가합니다.</p>
+      <div class="textarea_investcondition">
+        <p>내가 선택한 투자 조건</p>
+        <p>얼리버드</p>
+        <p>5% 페이백 혜택</p>
+      </div>
+      <p class="guide_text">
+        페이백은 배정 완료시 MyAccount 계좌로 지급됩니다.<br/>
+        최종 배정 금액이 최소 투자 금액보다 작을 경우 페이백 지급 대상에서 제외됩니다.
+      </p>
+      <button class="popup_button_blue" (click)="switchStep('6')">다음</button>
+    </div>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'6'">
+    <div class="popup_box">
+      <img src="../../assets/img/No.png" (click)="closePopUp()">
+      <div class="popup_head">
+        <span class="popup_logo"></span><h6>(주)브이에이트</h6><span>투자 조건</span>
+      </div>
+      <p class="popup_title">
+        마지막으로 필수 사항에 동의하면<br/>
+        <strong>투자가 완료됩니다</strong>
+      </p>
+  
+      <p class="guide_text">
+        투자 완료 전 신청 내역과 투자 위험의 주지 및 확인 의무로 지금까지 신청하신 투자내용과 위험 사항이 투자자님의 인증된 이메일 info@naver.com으로 발송되었습니다.<br/>
+        이메일을 확인하시고 아래 동의 사항을 확인하세요.<br/>
+        이메일 미확인으로 인한 책임은 본인에게 있습니다.<br/>
+      </p>
+      <p class="guide_noncheck">
+        <img src="../../assets/img/warning.png">
+        이메일을 받지 못하셨다면? 이메일 재발송 요청
+      </p>
+      <div class="textarea_agreebox">
+        <p>브이에이트</p>
+        <p>주식</p>
+        <div><span>{{amount}}</span><span>100,000원</span></div>
+        <p>신한은행 12345678901 홍길동<br/>
+        예상배정일: {{nowTime.getFullYear()}}. {{nowTime.getMonth() + 1}}. {{nowTime.getDate()}}</p>
+      </div>
+      <ul class="agree_list">
+        <li>
+            <img src="../../assets/img/{{checkbox.one ? 'check_active.png': 'check_nonactive.png'}}" (click)="checkbox.one = !checkbox.one">
+            <p>서비스 이용약관 동의(필수)</p>
+        </li>
+        <li>
+            <img src="../../assets/img/{{checkbox.two ? 'check_active.png': 'check_nonactive.png'}}" (click)="checkbox.two = !checkbox.two">
+            <p>증권 일괄 예탁 동의(필수)</p>
+        </li>
+        <li>
+            <img src="../../assets/img/{{checkbox.three ? 'check_active.png': 'check_nonactive.png'}}" (click)="checkbox.three = !checkbox.three">
+            <p>개인정보 제공 동의(필수)</p>
+        </li>
+        <li>
+            <img src="../../assets/img/{{checkbox.four ? 'check_active.png': 'check_nonactive.png'}}" (click)="checkbox.four = !checkbox.four">
+            <p>투자 내용 및 위험 확인 동의(필수)</p>
+        </li>
+        <li>
+            <img src="../../assets/img/{{checkbox.five ? 'check_active.png': 'check_nonactive.png'}}" (click)="checkbox.five = !checkbox.five">
+            <p>위 내용에 모두 동의합니다.</p>
+        </li>
+      </ul>
+      <p class="agree_small_guide_text">서비스 이용을 위해 다음 이용약관에 대한 동의가 필요합니다.</p>
+      <button class="popup_button_blue" (click)="switchStep('7')">투자 완료</button>
+    </div>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'7'">
+      <div class="popup_box">
+        <img src="../../assets/img/No.png" (click)="closePopUp()">
+        <img src="../../assets/img/invest_complete.png" class="invest_complete" alt="투자 완료">
+        <p class="popup_title_last">
+          <strong>3번째 투자자</strong>로<br/>
+          투자완료되었습니다.
+        </p>
+    
+        <p class="notice_guide_text">
+          펀딩 마감일은 2018.05.31입니다.<br/>
+          펀딩이 성공할 경우에만 배정이 진행되며<br/>
+          배정 예정일은 2018.06.08 입니다.<br/>
+          (기간 연장 및 증액으로 인해 변동이 있을 수 있습니다.)<br/>
+          펀딩 실패 시 투자 금액은 MyGIX 계좌로 전액 환불됩니다.<br/>
+        </p>
+        <button class="popup_button_blue">투자한 내역 자세히보기</button>
+        <button class="popup_button_white">매력적인 투자 프로젝트 더 보기</button>
+      </div>
+  </ng-container>
+</section>
+

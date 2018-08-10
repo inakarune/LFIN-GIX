@@ -1,4 +1,5 @@
 @import '~assets/css/helpers/variables';
+@import '~assets/css/helpers/mixins';
 
 $table_sky: #f1faff;
 $table_pink: #fef4f3;
@@ -35,7 +36,149 @@ $bar_pink: #fdd9d9;
     }
 }
 
+.contract_power {
+    
 
+    & > #subtitle_contract {
+        padding-left: 24px;
+        margin-bottom: 15px;
+        margin-top: 15px;
+
+        & span:nth-child(1) {
+            @include sizeWeightColor(19px, bold, black);
+        }
+
+        & span:nth-child(2) {
+            @include sizeWeightColor(18px, 400, black);
+        }
+    }
+
+    & > p:nth-child(odd) {
+        & span:nth-child(1) {
+            @include sizeWeightColor(14px, 400, #2885ab);
+        }
+
+        & span:nth-child(2) {
+            @include sizeWeightColor(15px, 400, $orange);
+        }
+    }
+
+    & > p:nth-child(even){
+        & span:nth-child(1) {
+            @include sizeWeightColor(14px, 400, #2885ab);
+        }
+
+        & span:nth-child(2) {
+            @include sizeWeightColor(15px, 400, $blue);
+        }
+    }
+
+    & > p {
+        width: initial;
+        padding-right: 30px;
+        padding-left: 47px;
+        text-align: right;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+}
+
+.slider_dot {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid $borderColor;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 16.5px 0;
+    margin-top: 49px;
+
+    & > span {
+        width: 17px;
+        height: 17px;
+        background-color: lightgrey;
+        border-radius: 20px;
+        display: inline-block;
+        margin: 0px 5px;
+    }
+}
+
+.total_dash {
+    & p {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    & p:nth-child(1) span:nth-child(1) {
+        @include sizeWeightColor(19px, bold, black);
+        margin-bottom: 15px;
+    }
+
+    & p:nth-child(2) span:nth-child(1), & p:nth-child(3) span:nth-child(1) {
+        @include sizeWeightColor(18px, bold, black);
+        margin-bottom: 15px;
+    }
+
+    & p:nth-child(4) span:nth-child(1), & p:nth-child(5) span:nth-child(1) {
+        @include sizeWeightColor(19px, bold, black);
+        // margin: 15px 0px;
+    }
+
+    & p:nth-child(6) span:nth-child(1) {
+        @include sizeWeightColor(18px, 400, $orange);
+        margin-bottom: 15px;
+        margin-top: 10px;
+    }
+
+    & p:nth-child(7) span:nth-child(1) {
+        @include sizeWeightColor(18px, 400, $blue);
+        margin-bottom: 10px;
+    }
+
+    & p:nth-child(1) span:nth-child(2) {
+        @include sizeWeightColor(15px, 400, black);
+        margin-bottom: 15px;
+    }
+
+    & p:nth-child(2) span:nth-child(2), & p:nth-child(3) span:nth-child(2) {
+        @include sizeWeightColor(15px, 400, black);
+        margin-bottom: 15px;
+    }
+
+    & p:nth-child(4) span:nth-child(2) {
+        @include sizeWeightColor(13px, 400, black);
+        text-align: right;
+
+        & > strong {
+            @include sizeWeightColor(18px, 400, $orange);
+        }
+        margin: 5px 0px;
+    }
+    
+    & p:nth-child(5) span:nth-child(2) {
+        @include sizeWeightColor(13px, 400, black);
+        text-align: right;
+        
+        & > strong {
+            @include sizeWeightColor(18px, 400, $blue);
+        }
+        margin: 5px 0px;
+    }
+
+    & p:nth-child(6) span:nth-child(2) {
+        @include sizeWeightColor(18px, 400, $orange);
+        margin-bottom: 15px;
+        margin-top: 10px;
+    }
+
+    & p:nth-child(7) span:nth-child(2) {
+        @include sizeWeightColor(18px, 400, $blue);
+        margin-bottom: 10px;
+    }
+}
 
 .hoga_table_top {
     width: 975px;
@@ -63,6 +206,10 @@ $bar_pink: #fdd9d9;
         width: 341px;
     }
 
+    & td:nth-child(4) {
+        padding: 0 15px;
+    }
+
     & td:nth-child(2), & td:nth-child(3) {
         width: 145.5px;
         text-align: center;
@@ -88,15 +235,6 @@ $bar_pink: #fdd9d9;
         background-color: white;
         width: 341px;
     }
-
-    // & td:first-child {
-    //     background-color: white;
-    //     width: 341px;
-    // }
-
-    // & td:nth-child(1) {
-    //     font-size: 18px;
-    // }
 
     & tr:nth-child(n + 1) td:nth-child(1) {
         font-size: 21px;

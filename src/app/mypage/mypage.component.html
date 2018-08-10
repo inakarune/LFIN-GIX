@@ -4,10 +4,8 @@
     <section>
       <ul class="chart_tabmenu">
         <li [class.selected]="'1' === list" (click)="selectTabMenu('1')">1일</li>
-        <li [class.selected]="'2' === list" (click)="selectTabMenu('2')">3개월</li>
-        <li [class.selected]="'3' === list" (click)="selectTabMenu('3')">1년</li>
-        <li [class.selected]="'4' === list" (click)="selectTabMenu('4')">3년</li>
-        <li [class.selected]="'5' === list" (click)="selectTabMenu('5')">10년</li>
+        <li [class.selected]="'2' === list" (click)="selectTabMenu('2')">1주일</li>
+        <li [class.selected]="'3' === list" (click)="selectTabMenu('3')">1개월</li>
         <li [class.selected]="'6' === list" (click)="selectTabMenu('6')">일봉</li>
         <li [class.selected]="'7' === list" (click)="selectTabMenu('7')">주봉</li>
         <li [class.selected]="'8' === list" (click)="selectTabMenu('8')">월봉</li>
@@ -34,33 +32,12 @@
     <canvas class="funding_company_chart" #myCanvas width="480px" height="500px" style="background: white;"></canvas>
     <section class="dealing">
       <ul class="dealing_list">
-        <li>
-          <img src="../../assets/img/duck_icon.jpeg"/>
+        <li *ngFor="let game of dealingList">
+          <img src="{{game.icon_url}}"/>
           <div>
-            <h5>퍼즐</h5>
-            <p>비덕:캔디...<span>105</span><span>23</span><img src="../../assets/svg/baseline-arrow_upward-24px.svg"></p>
+            <h5>{{game.category}}</h5>
+            <p><b>{{game.title}}</b><span>105</span><span>23</span><img src="../../assets/svg/baseline-arrow_upward-24px.svg"></p>
           </div>
-        </li>
-        <li>
-            <img src="../../assets/img/duck_icon.jpeg"/>
-            <div>
-              <h5>퍼즐</h5>
-              <p>비덕:캔디...<span>105</span><span>23</span><img src="../../assets/svg/baseline-arrow_upward-24px.svg"></p>
-            </div>
-        </li>
-        <li>
-            <img src="../../assets/img/duck_icon.jpeg"/>
-            <div>
-              <h5>퍼즐</h5>
-              <p>비덕:캔디...<span>105</span><span>23</span><img src="../../assets/svg/baseline-arrow_upward-24px.svg"></p>
-            </div>
-        </li>
-        <li>
-            <img src="../../assets/img/duck_icon.jpeg"/>
-            <div>
-              <h5>퍼즐</h5>
-              <p>비덕:캔디...<span>105</span><span>23</span><img src="../../assets/svg/baseline-arrow_upward-24px.svg"></p>
-            </div>
         </li>
       </ul>
     </section>

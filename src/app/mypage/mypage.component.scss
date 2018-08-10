@@ -13,9 +13,17 @@
 .chart_tabmenu {
     list-style: none;
     display: inline-flex;
-    padding: 0;
+    padding: 0 20px;
+    margin-bottom: 10px;
     width: 480px;
     justify-content: space-around;
+    text-align: center;
+
+    & > li {
+        width: 53px;
+        padding-bottom: 10px;
+        margin: 0 10px;
+    }
 }
 
 .selected {
@@ -34,6 +42,15 @@
     margin-top: 41px;
     margin-bottom: 42px;
     font-weight: bold;
+}
+
+.username::before {
+    content: '●';
+    font-size: 53px;
+    color: $blue;
+    margin-right: 15px;
+    position: relative;
+    bottom: -5px;
 }
 
 .data_number {
@@ -88,8 +105,6 @@
     padding-bottom: 10px;
     margin-left: 25px;
 }
-
-
 
 @media all and (max-width: 767px) {
     .funding_data {

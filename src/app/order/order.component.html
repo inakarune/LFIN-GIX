@@ -34,94 +34,131 @@
     <section class="table_group_order">
       <table class="order_table_top">
         <tr>
-          <td colspan="2">17,800</td>
+          <td colspan="2"><img src="../assets/img/up_arrow.png">17,800</td>
         </tr>
         <tr>
-          <td>13,500</td>
-          <td><span class="table_bar_right" style="width: 80px;"><label>111,222</label></span></td>
+          <td>13,500<b>-1.46%</b></td>
+          <td><span class="table_bar_blue" style="width: 84px;"><label>4,641</label></span></td>
         </tr>
         <tr>
-          <td>13,500</td>
-          <td><span class="table_bar_right" style="width: 80px;"><label>111,222</label></span></td>
+          <td>13,500<b>-1.46%</b></td>
+          <td><span class="table_bar_blue" style="width: 36px;"><label>1,265</label></span></td>
         </tr>
         <tr>
-          <td>13,500</td>
-          <td><span class="table_bar_right" style="width: 80px;"><label>111,222</label></span></td>
+          <td>13,500<b>-1.46%</b></td>
+          <td><span class="table_bar_blue" style="width: 16px;"><label>586</label></span></td>
         </tr>
         <tr>
-          <td>13,500</td>
-          <td><span class="table_bar_right" style="width: 80px;"><label>111,222</label></span></td>
+          <td>13,500<b>-1.46%</b></td>
+          <td><span class="table_bar_blue" style="width: 50px;"><label>1,604</label></span></td>
         </tr>
         <tr>
-          <td>13,500</td>
-          <td><span class="table_bar_right" style="width: 80px;"><label>111,222</label></span></td>
+          <td>13,500<b>-1.46%</b></td>
+          <td><span class="table_bar_blue" style="width: 6px;"><label>100</label></span></td>
         </tr>
         <tr>
-          <td>13,500</td>
-          <td><span class="table_bar_right" style="width: 80px;"><label>111,222</label></span></td>
-        </tr>
-        <tr>
-          <td>13,500</td>
-          <td><span class="table_bar_right" style="width: 80px;"><label>111,222</label></span></td>
+          <td>13,500<b>-1.46%</b></td>
+          <td><span class="table_bar_blue" style="width: 2px;"><label>4</label></span></td>
         </tr>
       </table>
   
       <table class="order_table_bottom">
         <tr>
-          <td>13,500</td>
-          <td><span class="table_bar_right" style="width: 80px;"><label>111,222</label></span></td>
+          <td>13,500<b>-1.46%</b></td>
+          <td><span class="table_bar_pink" style="width: 26px;"><label>1,440</label></span></td>
         </tr>
         <tr>
-          <td>13,500</td>
-          <td><span class="table_bar_right" style="width: 80px;"><label>111,222</label></span></td>
+          <td>13,500<b>-1.46%</b></td>
+          <td><span class="table_bar_pink" style="width: 79px;"><label>3,220</label></span></td>
         </tr>
         <tr>
-          <td>13,500</td>
-          <td><span class="table_bar_right" style="width: 80px;"><label>111,222</label></span></td>
+          <td>13,500<b>-1.46%</b></td>
+          <td><span class="table_bar_pink" style="width: 42px;"><label>2,096</label></span></td>
         </tr>
         <tr>
-          <td>13,500</td>
-          <td><span class="table_bar_right" style="width: 80px;"><label>111,222</label></span></td>
+          <td>13,500<b>-1.46%</b></td>
+          <td><span class="table_bar_pink" style="width: 49px;"><label>2,165</label></span></td>
         </tr>
         <tr>
-          <td>13,500</td>
-          <td><span class="table_bar_right" style="width: 80px;"><label>111,222</label></span></td>
+          <td>13,500<b>-1.46%</b></td>
+          <td><span class="table_bar_pink" style="width: 7px;"><label>457</label></span></td>
         </tr>
         <tr>
-          <td>13,500</td>
-          <td><span class="table_bar_right" style="width: 80px;"><label>111,222</label></span></td>
-        </tr>
-        <tr>
-          <td>13,500</td>
-          <td><span class="table_bar_right" style="width: 80px;"><label>111,222</label></span></td>
-        </tr>
-        <tr>
-          <td colspan="2">17,800</td>
+          <td colspan="2"><img src="../assets/img/down_arrow.png">17,800</td>
         </tr>
       </table>
     </section>
-    <section class="order_window">
-      <ul class="window_subtabmenu">
-        <li class="selected_window">매수</li>
-        <li>매도</li>
-        <li>취소</li>
+    <section class="order_window" [ngSwitch]="step">
+      <ul class="window_subtabmenu" #ulEl>
+        <li [className]="step === 'buy' ? 'selectedRed' : ''">매수</li>
+        <li [className]="step === 'sell' ? 'selectedBlue': ''">매도</li>
+        <li [className]="step === 'cancel' ? 'selectedGreen' : ''">취소</li>
       </ul>
-      <div class="order_subcontents">
-        <select class="custom_select">
-          <option value="normal">nonrmal</option>
-        </select>
-        <button class="select_cache_button">현금</button>
-        <button class="control_b">-</button><div class="stock_input">0주</div><button class="control_b">+</button>
-        <button class="control_b">-</button><div class="stock_input">13,250원</div><button class="control_b">+</button>
-        <table>
-          <tr>
-            <td>주문총액</td>
-            <td>0원</td>
-          </tr>
-        </table>
-        <input type="checkbox" name="price" id="market_price"><label for="market_price">시장가</label>
-        <button class="cache_button">현금매수</button>
-      </div>
+      <ng-container *ngSwitchCase="'buy'">
+        <div class="order_subcontents">
+          <select class="custom_select">
+            <option value="normal">nonrmal</option>
+          </select>
+          <button class="select_cache_button">현금</button>
+          <button class="control_b" (click)="subtract('amount')">-</button><div class="stock_input">{{amount}}주</div><button class="control_b" (click)="add('amount')">+</button>
+          <button class="control_b" (click)="subtract('price')">-</button><div class="stock_input">{{commaMoney(price)}}원</div><button class="control_b" (click)="add('price')">+</button>
+          <table>
+            <tr>
+              <td>주문총액</td>
+              <td>{{commaMoney(amount * price)}}원</td>
+            </tr>
+          </table>
+          <div class="cbox">
+            <input type="checkbox" id="market_price">
+            <label for="market_price">시장가</label>
+          </div>
+          <button class="cache_button redBg">OK</button>
+        </div>
+      </ng-container>
+
+      <ng-container *ngSwitchCase="'sell'">
+        <div class="order_subcontents">
+          <select class="custom_select">
+            <option value="normal">nonrmal</option>
+          </select>
+          <button class="select_cache_button">현금</button>
+          <button class="control_b" (click)="subtract('amount')">-</button><div class="stock_input">{{amount}}주</div><button class="control_b" (click)="add('amount')">+</button>
+          <button class="control_b" (click)="subtract('price')">-</button><div class="stock_input">{{commaMoney(price)}}원</div><button class="control_b" (click)="add('price')">+</button>
+          <table>
+            <tr>
+              <td>주문총액</td>
+              <td>{{commaMoney(amount * price)}}원</td>
+            </tr>
+          </table>
+          <div class="cbox">
+            <input type="checkbox" id="market_price">
+            <label for="market_price">시장가</label>
+          </div>
+          <button class="cache_button blueBg">OK</button>
+        </div>
+      </ng-container>
+
+      <ng-container *ngSwitchCase="'cancel'">
+        <div class="order_subcontents">
+          <select class="custom_select">
+            <option value="normal">nonrmal</option>
+          </select>
+          <button class="select_cache_button">현금</button>
+          <button class="control_b">-</button><div class="stock_input">0주</div><button class="control_b">+</button>
+          <button class="control_b">-</button><div class="stock_input">13,250원</div><button class="control_b">+</button>
+          <table>
+            <tr>
+              <td>주문총액</td>
+              <td>0원</td>
+            </tr>
+          </table>
+          <div class="cbox">
+            <input type="checkbox" id="market_price">
+            <label for="market_price">시장가</label>
+          </div>
+          <button class="cache_button greenBg" (click)="cancel()">취소</button>
+        </div>
+      </ng-container>
     </section>
   </article>
 </main>

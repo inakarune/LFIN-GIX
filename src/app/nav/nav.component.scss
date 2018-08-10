@@ -35,11 +35,21 @@ nav {
     & > a:nth-child(4) {
         position: absolute;
         left: 50%;
+        line-height: 72px;
     }
 
     & > a:nth-child(5) {
         position: absolute;
         right: 20px;
+        display: flex;
+        align-items: center;
+        line-height: 72px;
+    }
+
+    & > a:nth-child(5)::before {
+        content: '●';
+        font-size: 3vw;
+        margin-right: 10px;
     }
 
     & > a:last-child {

@@ -1,12 +1,12 @@
 <main class="dealing_container">
-  <h1 class="game_title_deal">고스트 하우스</h1>
+  <h1 class="game_title_deal">{{game?.title}}</h1>
 
   <section class="order_subtabmenu">
-      <img src="../../assets/img/ghost_icon.png" />
+      <img src="{{game?.icon_url}}" />
       <p>52,300<br/>
         <span>700<label class="t_up"> </label></span><span>1.32%</span>
       </p>
-    <button class="order_button">주문 하기</button>
+    <button class="order_button" routerLink="/order">주문 하기</button>
   </section>
   <table class="kospi_table">
     <tr>
@@ -26,7 +26,40 @@
   
   <ng-container [ngSwitch]="list">
     <app-dealing-hoga-table *ngSwitchCase="'1'"></app-dealing-hoga-table>
-    <ng-container *ngSwitchCase="'2'">222222222</ng-container>
+    <ng-container *ngSwitchCase="'2'">
+      <div class="subtab_control_chart">
+        <button><img src="../../assets/img/refresh.png">가로차트</button>
+        <ul>
+          <li class="active">틱</li>
+          <li class="nonactive">분</li>
+          <li class="nonactive">일</li>
+          <li class="nonactive">주</li>
+          <li class="nonactive">월</li>
+        </ul>
+        <img src="../../assets/img/setting.png">
+      </div>
+      <div class="chart_tab_box">
+        <div>
+          <canvas class="funding_company_chart" #myLine width="833px" height="520px" style="background: white;"></canvas>
+          <canvas class="funding_company_chart" #myCanvas width="833px" height="130px" style="background: white;"></canvas>
+        </div>
+        <div class="chart_label">
+          <p>317,500</p>
+          <p>279,070</p>
+          <p>245,000</p>
+          <p>196,687</p>
+          <p>172,500</p>
+          <p>99,727</p>
+          <p><span>04</span></p>
+          <p>142,759</p>
+          <p>95,173</p>
+          <p>47,586</p>
+          <p>x1,000</p>
+        </div>
+      </div>
+
+    </ng-container>
+
     <ng-container *ngSwitchCase="'3'">
       <table class="deal_table">
         <tr>
@@ -39,6 +72,48 @@
           <td>05.22</td>
           <td>275.010</td>
           <td>9.480</td>
+          <td>3.33%</td>
+        </tr>
+        <tr>
+          <td>05.21</td>
+          <td>283.490</td>
+          <td>7.670</td>
+          <td>3.33%</td>
+        </tr>
+        <tr>
+          <td>05.21</td>
+          <td>283.490</td>
+          <td>7.670</td>
+          <td>3.33%</td>
+        </tr>
+        <tr>
+          <td>05.21</td>
+          <td>283.490</td>
+          <td>7.670</td>
+          <td>3.33%</td>
+        </tr>
+        <tr>
+          <td>05.21</td>
+          <td>283.490</td>
+          <td>7.670</td>
+          <td>3.33%</td>
+        </tr>
+        <tr>
+          <td>05.21</td>
+          <td>283.490</td>
+          <td>7.670</td>
+          <td>3.33%</td>
+        </tr>
+        <tr>
+          <td>05.21</td>
+          <td>283.490</td>
+          <td>7.670</td>
+          <td>3.33%</td>
+        </tr>
+        <tr>
+          <td>05.21</td>
+          <td>283.490</td>
+          <td>7.670</td>
           <td>3.33%</td>
         </tr>
         <tr>
@@ -72,7 +147,50 @@
           <td>3.33%</td>
           <td>8,945,756</td>
         </tr>
+        <tr>
+          <td>05.21</td>
+          <td>283.490</td>
+          <td>7.670</td>
+          <td>3.33%</td>
+          <td>8,945,756</td>
+        </tr>
+        <tr>
+          <td>05.21</td>
+          <td>283.490</td>
+          <td>7.670</td>
+          <td>3.33%</td>
+          <td>8,945,756</td>
+        </tr>
+        <tr>
+          <td>05.21</td>
+          <td>283.490</td>
+          <td>7.670</td>
+          <td>3.33%</td>
+          <td>8,945,756</td>
+        </tr>
+        <tr>
+          <td>05.21</td>
+          <td>283.490</td>
+          <td>7.670</td>
+          <td>3.33%</td>
+          <td>8,945,756</td>
+        </tr>
+        <tr>
+          <td>05.21</td>
+          <td>283.490</td>
+          <td>7.670</td>
+          <td>3.33%</td>
+          <td>8,945,756</td>
+        </tr>
+        <tr>
+          <td>05.21</td>
+          <td>283.490</td>
+          <td>7.670</td>
+          <td>3.33%</td>
+          <td>8,945,756</td>
+        </tr>
       </table>
     </ng-container>
   </ng-container>
-</main>  
+</main>
+<app-footer></app-footer>

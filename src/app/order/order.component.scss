@@ -1,6 +1,9 @@
 @import '~assets/css/helpers/variables';
 @import '~assets/css/components/menu';
 @import '~assets/css/components/button';
+@import '~assets/css/components/etc';
+
+$darkRed: #c34e47;
 
 .order_container {
     border-top: 1px solid $borderColor;
@@ -15,24 +18,11 @@
     text-align: left;
 }
 
-.tab_menu_c {
-    padding: 20px 0px;
-    display: flex;
-    justify-content: space-between;
-    font-size: 21px;
-    color: #686868;
-    text-align: center;
-
-    & > li {
-        width: 147px;
-    }
-}
-
 .selected {
-    border-bottom: 7px solid #c34e47;
+    border-bottom: 7px solid $darkRed;
     font-weight: bold;
     width: 147px;
-    color: #c34e47;
+    color: $darkRed;
     text-align: center;
     padding-bottom: 20px;
 }
@@ -71,16 +61,31 @@
     border-right: 10px solid transparent;
     border-top: 23px solid $blue;
     display: inline-flex;
-
 }
 
 .t_down {
 
 }
 
-$bar_pink: #c5eafd;
+$bar_blue: #c5eafd;
+$bar_pink: #fdd9d9;
 
-.table_bar_right {
+.table_bar_blue {
+    height: 38px;
+    line-height: 38px;
+    display: block;
+    text-align: right;
+    background-color: $bar_blue;
+    margin-right: auto;
+
+    & > label {
+        z-index: 1;
+        position: absolute;
+        left: 15px;
+    }
+}
+
+.table_bar_pink {
     height: 38px;
     line-height: 38px;
     display: block;
@@ -101,12 +106,36 @@ $bar_pink: #c5eafd;
     & td {
         border: 1px solid #a7a7a7;
         vertical-align: middle;
+        color: #2885ab;
     }
 
-    & tr:first-child td {
+    & tr td:nth-of-type(1) {
+        font-size: 21px;
+        color: #2885ab;
+        position: relative;
+
+        & > b {
+            position: absolute;
+            font-size: 14px;
+            bottom: 0px;
+        }
+    }
+
+    & tr td:nth-of-type(2) {
+        font-size: 19px;
+        color: black;
+    }
+
+    & tr:first-child td:nth-of-type(1) {
         height: 30px;
         text-align: center;
         background-color: white;
+        color: $darkRed;
+
+        & > img {
+            width: 15px;
+            margin-right: 10px;
+        }
     }
 
     & tr:nth-child(n + 1) td:nth-child(2) {
@@ -135,27 +164,60 @@ $bar_pink: #c5eafd;
     
     & td {
         border: 1px solid #a7a7a7;
+        border-top: none;
         vertical-align: middle;
     }
 
-    & tr:last-child td {
-        height: 30px;
-        text-align: center;
-        background-color: white;
+    & tr td:nth-of-type(1) {
+        font-size: 21px;
+        color: #2885ab;
+        position: relative;
+
+        & > b {
+            position: absolute;
+            font-size: 14px;
+            bottom: 0px;
+        }
     }
 
+    & tr td:nth-of-type(2) {
+        font-size: 19px;
+        color: black;
+    }
+
+    & tr:first-child td:nth-of-type(1) {
+        padding-left: 51px;
+        padding-top: 15px;
+        padding-bottom: 18px;
+        background-color: #fdd9d9;
+    }
+
+    
     & tr:nth-child(n + 1) td:nth-child(2) {
         position: relative;
     }
-
+    
     & tr:nth-child(n + 2) td:nth-child(1) {
         padding-left: 51px;
         padding-top: 15px;
         padding-bottom: 18px;
         width: 162.5px;
-        background-color: #dbefff;
+        background-color: #fdd9d9;
     }
     
+    & tr:last-child td:nth-of-type(1) {
+        height: 30px;
+        text-align: center;
+        background-color: white;
+        color: $blue;
+        padding: 0;
+
+        & > img {
+            width: 15px;
+            margin-right: 10px;
+        }
+    }
+
     & tr:nth-child(n + 1) td:nth-child(2) {
         width: 162.5px;
     }
@@ -165,6 +227,7 @@ $bar_pink: #c5eafd;
     display: flex;
     margin-bottom: 40px;
     margin-top: 15px;
+    justify-content: center;
 }
 
 $border3: 10px solid #d4d4d4;
@@ -172,6 +235,7 @@ $border3: 10px solid #d4d4d4;
 .password_box {
     display: flex;
     justify-content: center;
+    margin-top: 15px;
 }
 
 .password_b {
@@ -238,11 +302,11 @@ $border3: 10px solid #d4d4d4;
 
 .order_window {
     width: 630px;
-    height: 709px;
+    height: 786px;
     border-top: $border3;
     border-left: $border3;
     border-right: $border3;
-    border-bottom: 50px solid #d4d4d4;
+    border-bottom: 300px solid #d4d4d4;
     box-sizing: border-box;
 
     & .select_cache_button {
@@ -308,11 +372,6 @@ $border3: 10px solid #d4d4d4;
     }
 }
 
-input[type=checkbox] {
-    transform: scale(1.5);
-
-}
-
 .window_subtabmenu {
     display: flex;
     justify-content: space-between;
@@ -329,19 +388,44 @@ input[type=checkbox] {
     }
 }
 
-.selected_window {
+@mixin selectTab($color) {
     background-color: white;
-    color: $blue;
+    color: $color;
+}
+
+.selectedRed {
+    @include selectTab($darkRed);
+}
+
+.selectedBlue {
+    @include selectTab($blue);
+}
+
+$green: #007000;
+
+.selectedGreen {
+    @include selectTab($green);
 }
 
 .cache_button {
     font-size: 32px;
     font-weight: lighter;
     color: white;
-    background-color: #c34e47;
     width: 339px;
     height: 77px;
     margin-left: auto;
+}
+
+.redBg {
+    background-color: $darkRed;
+}
+
+.blueBg {
+    background-color: $blue;
+}
+
+.greenBg {
+    background-color: $green;
 }
 
 .stock_input {

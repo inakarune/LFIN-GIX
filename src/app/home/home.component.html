@@ -25,26 +25,28 @@
   <section class="dealing">
     <h2>거래진행중 <img src="../../assets/svg/baseline-chevron_right-24px.svg"></h2>
     <ul class="dealing_list">
-      <li *ngFor="let game of dealingList" routerLink="/dealing/{{game_title}}">
+      <li *ngFor="let game of dealingList; let i = index" routerLink="/dealing/{{game.title}}">
         <img src="{{game.icon_url}}"/>
         <div>
           <h5>{{game.category}}</h5>
-          <p><b>{{game.title}}</b><span>105</span><span>23</span><img src="../../assets/svg/baseline-arrow_upward-24px.svg"></p>
+          <p><b>{{game.title}}</b><span>{{i * 10 ? i * 100 : 153}}</span><span [className]="i % 2 ? 'orange': 'blue'">{{i * 10 ? i * 10 : 10}}</span><img src="../../assets/svg/baseline-arrow_{{i % 2 ? 'upward': 'downward'}}-24px.svg"></p>
         </div>
       </li>
     </ul>
   </section>
-  <section class="news">
-    <h2>소식</h2>
-    <div>준비중</div>
-  </section>
-  <section class="small_section">
-    <h2>실시간정보</h2>
-    <div style="margin-bottom: 10px;">준비중</div>
-    <h2>소식2</h2>
-    <div>준비중</div>
+  <section class="dealing">
+    <h2>펀딩 완료 프로젝트 <img src="../../assets/svg/baseline-chevron_right-24px.svg"></h2>
+    <ul class="complete_funding_list">
+      <li *ngFor="let game of dealingList" routerLink="/funding/{{game.title}}">
+        <img src="{{game.icon_url}}"/>
+        <div>
+          <h5>{{game.title}}</h5>
+          <progress value="100" max="100"></progress>
+          <p><span>150%</span><span>478,000원 달성 9일남음</span></p>
+        </div>
+      </li>
+    </ul>
   </section>
 </article>
-
 
 <app-footer></app-footer>

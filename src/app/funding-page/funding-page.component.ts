@@ -12,6 +12,7 @@ import { CompanyService } from '../services/company.service';
 export class FundingPageComponent implements OnInit {
   game;
   company;
+  condition = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -24,6 +25,10 @@ export class FundingPageComponent implements OnInit {
     this.getGame();
   }
 
+  toggleCondition() {
+    this.condition = !this.condition;
+  }
+
   getGame() {
     const id = this.route.snapshot.paramMap.get('game');
     const that = this;
@@ -31,7 +36,7 @@ export class FundingPageComponent implements OnInit {
     this.gameService.getGame(id)
       .subscribe(game => {
         this.game = game;
-        that.getCompany(this.game.id);
+        that.getCompany(this.game._id);
       },
       err => console.error(err));
   }
@@ -39,10 +44,7 @@ export class FundingPageComponent implements OnInit {
   getCompany(id: string) {
     this.companyService.getCompany(id)
       .subscribe(
-        company => {
-          this.company = company
-          console.log(company)
-        },
+        company => this.company = company,
       err => console.error(err)
     );
   }

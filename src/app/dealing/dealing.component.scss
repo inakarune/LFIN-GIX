@@ -38,8 +38,122 @@
 
 }
 
+.chart_tab_box {
+    display: flex;
+}
 
+.subtab_control_chart {
+    display: flex;
+    border-bottom: 1px solid #c2c2c2;
+    padding: 10px 15px;
 
+    & > img {
+        height: 45px;
+        margin-left: 10px;
+    }
+
+    & button {
+        height: 50px;
+        width: 145px;
+        color: black;
+        font-size: 18px;
+        border-radius: 3px;
+        border: 1px solid #707070;
+        text-align: center;
+        background-color: white;
+
+        & > img {
+            width: 15px;
+            margin-right: 15px;
+        }
+    }
+
+    & ul {
+        display: flex;
+        border: 1px solid #707070;
+        border-radius: 3px;
+        margin-left: auto;
+
+        & li {
+            text-align: center;
+            width: 53.4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+            font-size: 17px;
+            border-right: 1px solid #707070;
+        }
+
+        & li:nth-of-type(5) {
+            border-right: none;
+        }
+    }
+}
+
+.nonactive {
+    color: black;
+}
+
+.active {
+    color: white;
+    background-color: #707070;
+}
+
+.chart_label {
+    width: 141px;
+    border: 1px solid $borderColor;
+    border-top: none;
+    box-sizing: border-box;
+
+    & > p:nth-of-type(1), & > p:nth-of-type(3) {
+        margin: 50px 0px;
+    }
+
+    & > p:nth-of-type(5) {
+        margin: 20px 0px 100px;
+    }
+
+    & > p:nth-of-type(6) {
+        margin-bottom: 20px;
+    }
+
+    & > p:nth-of-type(2) {
+        background-color: $blue;
+        color: white;
+        padding: 5px;
+    }
+
+    & > p:nth-of-type(4) {
+        background-color: green;
+        color: white;
+        padding: 5px;
+    }
+
+    & > p:nth-of-type(7) {
+        background-color: $borderColor;
+    }
+
+    & > p:nth-of-type(7) span {
+        color: white;
+        background-color: green;
+        width: 50px;
+        padding: 5px;
+        display: inline-block;
+    }
+
+    & > p:nth-of-type(8) {
+        margin: 40px 0px 20px;
+    }
+
+    & > p:nth-of-type(9) {
+        margin: 20px 0px;
+    }
+
+    & > p:nth-of-type(10) {
+        margin: 10px 0px;
+    }
+}
 
 .deal_table {
     width: 975px;

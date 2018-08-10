@@ -1,3 +1,4 @@
+<app-funding-condition *ngIf="condition" (onClose)="toggleCondition($event)"></app-funding-condition>
 <main class="page_container">
   <h1>{{game?.title}}</h1>
   <p class="sub">{{game?.subtitle}}</p>
@@ -41,7 +42,7 @@
       <p>559명</p>
       <div class="button_box">
         <button><a href="{{game?.google}}">구글 스토어</a></button><button><a href="game?.apple">애플 스토어</a></button>
-        <button>투자하기</button>
+        <button (click)="condition = !condition">투자하기</button>
         <button>♥69</button>
         <button>공유하기</button>
       </div>

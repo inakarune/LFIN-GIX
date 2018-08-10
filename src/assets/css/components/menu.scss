@@ -1,9 +1,8 @@
 .kospi_table {
-    border-top: 1px solid #f1f9ff;
-    border-bottom: 1px solid #f1f9ff;
+    border-top: 1px solid #c2c2c2;
+    border-bottom: 1px solid #c2c2c2;
     width: 100%;
     font-size: 22px;
-
 
     & td {
         padding: 15px 0px;
@@ -14,6 +13,7 @@
         background-color: #f6f6f6;
         padding-left: 30px;
         text-align: left;
+        width: 244px;
     }
 }
 
@@ -51,6 +51,7 @@
     font-size: 21px;
     color: #686868;
     text-align: center;
+    border-bottom: 1px solid #c2c2c2;
 
     & > li {
         width: 147px;
